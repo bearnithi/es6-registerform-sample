@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>Registration Page</title>
+</head>
+
+<body>
+    <main>
+        <section class="btn-container">
+            <button class="btn" id="registerBtn">Register</button>
+        </section>
+
+        <section class="register-form hide" id="formContainer">
+            <div class="profile-pic form-group col-3 text-center">
+                <label for="uploadProfilePic" class="profile-label">
+                    <img src="./images/profile.png" class="profile-img" id="profileImg" />
+                    <span class="profile-pic-text">Upload Photo</span>
+                </label>
+                <input class="upload-file" id="uploadProfilePic" type="file" />
+
+                <label for="uploadProfilePic" class="profile-label"><button class="btn btn-sm hide" id="editPhoto">Edit
+                        Photo</button></label>
+
+                <button class="btn btn-sm  hide" id="editProfile">Edit Profile</button>
+            </div>
+
+            <form action="#" id="registerForm" class="profile-form">
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-6 name-space">
+                            <label class="form-label" for="firstname">First Name
+                                <sup class="required">*</sup>
+                            </label>
+
+                            <input required type="text" name="firstname" maxlength="20" id="firstname" placeholder="First Name"
+                                class="form-input">
+                        </div>
+                        <div class="col-6">
+                            <label class="form-label" for="lastname">Last Name
+                                <sup class="required">*</sup>
+                            </label>
+                            <input required type="text" name="lastname" maxlength="20" id="lastname" placeholder="Last Name"
+                                class="form-input">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="age-container">
+                        <label class="form-label" for="age">Age
+                            <sup class="required">*</sup>
+                        </label>
+
+                        <span class="age-value" id="ageValue">
+
+                        </span>
+                    </div>
+
+                    <input required type="range" name="age" id="age" min="18" max="100" value="20"
+                        class="form-input range" />
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="email">Email
+                        <sup class="required">*</sup>
+                    </label>
+                    <input required type="email" name="email" id="email" placeholder="Email" class="form-input" />
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="tel">Tel
+                        <sup class="required">*</sup>
+                    </label>
+                    <input required type="tel" name="tel" id="tel" maxlength="10" placeholder="Telephone" class="form-input" />
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="Country">Country
+                        <sup class="required">*</sup>
+                    </label>
+                    <select required name="country" id="country" class="form-input">
+                        <option value="">Select Country</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="State">State
+                        <sup class="required">*</sup>
+                    </label>
+                    <select required name="state" id="state" class="form-input">
+                        <option value="">Select State</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="Address">Address
+                        <sup class="required">*</sup>
+                    </label>
+                    <select required name="address" id="address" class="form-input">
+                        <option value="">Select Address</option>
+                        <option value="HOME">Home</option>
+                        <option value="COMPANY">Company</option>
+                    </select>
+                </div>
+
+                <div class="form-group hide" id="Home">
+                    <div class="row">
+                        <div class="col-6">
+                            <label class="form-label" for="companyAddress1">Home Address 1</label>
+                            <input type="text" name="homeAddress1" id="homeAddress1" placeholder="Home Address 1"
+                                class="form-input">
+                        </div>
+                        <div class="col-6">
+                            <label class="form-label" for="homeAddress2">Home Address 2</label>
+                            <input type="text" name="homeAddress2" id="homeAddress2" placeholder="Home Address 2"
+                                class="form-input">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group hide" id="Company">
+                    <div class="row">
+                        <div class="col-6">
+                            <label class="form-label" for="companyAddress1">Company Address 1</label>
+                            <input type="text" name="companyAddress1" id="companyAddress1"
+                                placeholder="Company Address 1" class="form-input">
+                        </div>
+                        <div class="col-6">
+                            <label class="form-label" for="companyAddress2">Company Address 2</label>
+                            <input type="text" name="companyAddress2" id="companyAddress2"
+                                placeholder="Company Address 2" class="form-input">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="Interests">Interests
+                        <sup class="required">*</sup>
+                    </label>
+                    <input required type="text" name="interests" id="interests" placeholder="Interests"
+                        class="form-input" />
+                </div>
+
+                <ul class="chips-container" id="chips"></ul>
+
+                <div class="form-group">
+                    <label>
+                        <input required type="checkbox" name="checkbox" id="checkbox" />
+                        Subscribe to the news letter <sup class="required">*</sup>
+                    </label>
+                </div>
+
+
+
+
+                <div class="form-group text-right">
+                    <input type="submit" id="submit" class="btn" name="register" value="Submit">
+                </div>
+            </form>
+
+            <div class="profile-info" id="profileInfo">
+
+            </div>
+        </section>
+    </main>
+
+    <!-- DEV-->
+    <!-- <script type="module" src="./js/dom-handler.js"></script>
+    <script type="module" src="./js/validation.js"></script>
+    <script type="module" src="./js/chips-component.js"></script>
+    <script type="module" src="./js/registerform.js"></script>
+    <script type="module" src="./js/script.js"></script> -->
+
+<!-- PROD -->
+    <script src="./dist/main.js"></script>
+</body>
+
+</html>
